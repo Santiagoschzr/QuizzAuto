@@ -1,0 +1,21 @@
+{
+  "name": "quizzauto",
+  "version": "1.0.0",
+  "description": "Cypress tests for Boozang Lab exercises",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "test": "cypress run"
+  },
+  "keywords": [
+    "cypress",
+    "testing",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^14.3.1"
+  }
+}

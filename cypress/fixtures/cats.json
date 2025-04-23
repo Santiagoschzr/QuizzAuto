@@ -1,0 +1,12 @@
+[
+  {
+    "name": "adjnjd",
+    "description": "A fluffy cat with a white coat",
+    "Outdoors": true
+  },
+  {
+    "name": "dnieidnen",
+    "description": "A cat with a black coat",
+    "Outdoors": false
+  }
+]
