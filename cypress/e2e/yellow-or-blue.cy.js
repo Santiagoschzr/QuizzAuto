@@ -8,7 +8,6 @@ describe("Yellow or Blue", () => {
     cy.get(":nth-child(3) > .sub_list > :nth-child(1) > span > .link").click();
     cy.get(".form_btn").click();
 
-    // Get the color and save it in a variable
     cy.get(".color").then((color) => {
       const colorText = color[0].innerText.toLowerCase();
       if (colorText === "yellow") {

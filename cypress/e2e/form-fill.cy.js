@@ -17,13 +17,10 @@ describe("Form Fill", () => {
 
   it("should fill the form with fixture data and verify both objects were added", () => {
     cy.fixture("formData.json").then((formData) => {
-      // Fill first form
       cy.fillForm(formData[0]);
 
-      // Fill second form
       cy.fillForm(formData[1]);
 
-      // Verify both entries
       cy.get(".orange").click();
       formData.forEach((data) => {
         cy.get(".print_form").should("contain", data.name);

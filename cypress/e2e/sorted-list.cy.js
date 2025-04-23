@@ -6,12 +6,10 @@ describe("Sorted List", () => {
     cy.get(".collection").then((collection) => {
       const collectionCount = collection[0].children.length;
       if (collectionCount > 0) {
-        // Handle deletion based on number of items
         if (collectionCount === 1) {
           cy.get(".icon_btn > .fas").click();
           cy.wait(100);
         } else {
-          // Delete items one by one for multiple items
           for (let i = collectionCount; i >= 1; i--) {
             cy.get(`:nth-child(${i}) > .icon_btn > .fas`).click();
             cy.wait(100);
@@ -27,11 +25,9 @@ describe("Sorted List", () => {
     cy.get(".list_form").type(item1);
     cy.get(".form_btn").click();
     cy.wait(100);
-    // Add second item
     cy.get(".list_form").type(item2);
     cy.get(".form_btn").click();
     cy.wait(100);
-    // Verify items are in the list
     cy.get(".collection").children().should("have.length", 2);
     cy.get(".collection").children().should("contain", item1);
     cy.get(".collection").children().should("contain", item2);

@@ -8,7 +8,6 @@ describe("Cat Shelter", () => {
   it("should add cats and assign homes", () => {
     cy.fixture("cats.json").then((cats) => {
       cy.get(".cat_shelter_header > .link_btn").click();
-      // Add first cat
       cy.get(".list_form > :nth-child(1)").type(cats[0].name);
       cy.get(".list_form > .description").type(cats[0].description);
       if (cats[0].Outdoors) {
@@ -18,7 +17,6 @@ describe("Cat Shelter", () => {
       }
       cy.get(".text-center > .form_btn").click();
       cy.wait(100);
-      // Add second cat
       cy.get(".cat_shelter_header > .link_btn").click();
       cy.get(".list_form > :nth-child(1)").type(cats[1].name);
       cy.get(".list_form > .description").type(cats[1].description);
@@ -28,9 +26,7 @@ describe("Cat Shelter", () => {
         cy.get(".go_out_or_not > :nth-child(2) > label > input");
       }
       cy.get(".text-center > .form_btn").click();
-      // Verify cats are added and assigned
 
-      // Click new home button for each cat by finding their row and verify class change
       cy.contains(cats[0].name)
         .parent()
         .find(".new_home")
